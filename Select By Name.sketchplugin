@@ -1,0 +1,15 @@
+//Selects all layers of the same name (control s)
+
+var iv = ([selection count] > 0)? selection[0].name() : ""
+var name = [doc askForUserInput:"Name to search for (case-sensitive)" initialValue:iv]
+
+[[doc currentPage] deselectAllLayers]
+
+var layers = [[doc currentPage] children]
+
+var loop = [layers objectEnumerator]
+while (layer = [loop nextObject]) {
+    if (layer.name().indexOf(name) > -1) {
+        [layer select:true byExpandingSelection:true]
+    }
+}
