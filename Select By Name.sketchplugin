@@ -9,7 +9,7 @@ var layers = [[doc currentPage] children]
 
 var loop = [layers objectEnumerator]
 while (layer = [loop nextObject]) {
-    if (layer.name().indexOf(name) > -1) {
+    if (layer.name().indexOf(name) > -1 && layer.class() != "MSLayerGroup") {
         [layer select:true byExpandingSelection:true]
     }
 }
