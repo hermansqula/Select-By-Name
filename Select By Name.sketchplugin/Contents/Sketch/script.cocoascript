@@ -1,0 +1,21 @@
+var onRun = function(context) {
+    var doc = context.document
+    var selection = context.selection
+
+    var iv = (selection.count() > 0)? selection[0].name() : ""
+    var name = doc.askForUserInput_initialValue("Name to search for (case-sensitive)", iv)
+
+    if (name != "") {
+        name = name.toLowerCase()
+        doc.currentPage().deselectAllLayers()
+
+        var layers = doc.currentPage().children()
+
+        var loop = layers.objectEnumerator()
+        while (layer = loop.nextObject()) {
+            if (layer.name().toLowerCase().indexOf(name) > -1 && layer.class() != "MSLayerGroup") {
+                layer.select_byExpandingSelection(true, true)
+            }
+        }
+    }
+};
