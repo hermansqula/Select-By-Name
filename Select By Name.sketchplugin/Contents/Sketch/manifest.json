@@ -1,26 +1,27 @@
 {
-  "name" : "Select By Name",
-  "description" : "Selects all layers of the same name",
+  "name": "Select By Name",
+  "description": "Selects all layers of the same name",
   "author": "Seb Jachec",
-  "authorEmail" : "sjachec1@gmail.com",
-  "homepage": "https://github.com/sebj/Select-By-Name",
+  "authorEmail": "hi@sebj.me",
+  "homepage": "",
   "version": 1.0,
-  "identifier": "me.sebj.select-by-name",
+  "bundleVersion": 1.0,
   "compatibleVersion": 3.3,
-  "commands" : [
+  "homepage": "https://github.com/sebj/Select-By-Name",
+  "commands": [
     {
-      "script" : "script.cocoascript",
-      "handler" : "onRun",
-      "shortcut" : "control s",
-      "name" : "Select By Name",
-      "identifier" : "select-by-name"
+      "script": "script.cocoascript",
+      "handler": "onRun",
+      "shortcut": "control s",
+      "name": "Select By Name",
+      "identifier": "select-by-name"
     }
   ],
-  "menu" : {
+  "menu": {
     "isRoot": true,
-    "items" : [
+    "items": [
       "select-by-name"
     ],
-    "title" : "Select By Name"
+    "title": "Select By Name"
   }
 }
