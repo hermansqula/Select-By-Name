@@ -3,7 +3,6 @@
   "description": "Selects all layers of the same name",
   "author": "Seb Jachec",
   "authorEmail": "hi@sebj.me",
-  "homepage": "",
   "version": 1.0,
   "bundleVersion": 1.0,
   "compatibleVersion": 3.3,
