@@ -13,7 +13,7 @@ var onRun = function(context) {
 
         var loop = layers.objectEnumerator()
         while (layer = loop.nextObject()) {
-            if (layer.name().toLowerCase().indexOf(name) > -1 && layer.class() != "MSLayerGroup") {
+            if (layer.name().toLowerCase().indexOf(name) > -1) {
                 layer.select_byExpandingSelection(true, true)
             }
         }
